@@ -1,6 +1,7 @@
 <?php 
-$badWords = $_GET=["ipsum"];
-$paragrafo = "Lorem ipsum dolor sit amet consectetur adipisicing elit lorem ipsum dolor sit amet consectetur adipisicing elit";
+$badWords = $_GET=["badword"];
+$paragrafo = "Lorem ipsum dolor sit amet consectetur adipisicing elit lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit lorem ipsum dolor sit amet consectetur adipisicing elit";
+$paragrafo2 = str_replace("ipsum", "***", $paragrafo);
 // var_dump($badWords);
 ?>
 <!DOCTYPE html>
@@ -14,5 +15,8 @@ $paragrafo = "Lorem ipsum dolor sit amet consectetur adipisicing elit lorem ipsu
   <body>
     <p><?php echo $paragrafo; ?></p>
     <h3>Lunghezza del paragrafo: <?php echo strlen($paragrafo)?> caratteri </h3>
+
+    <p><?php echo $paragrafo2; ?></p>
+    <h3>Lunghezza del paragrafo: <?php echo strlen($paragrafo2)?> caratteri </h3>
   </body>
 </html>
